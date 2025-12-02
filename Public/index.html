@@ -1,0 +1,308 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Air New Zealand - Kia Ora, Your Journey Starts Here</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">✈️</span>
+                Air <span class="nz">New Zealand</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#book">Book</a></li>
+                <li><a href="#manage">Manage</a></li>
+                <li><a href="#checkin">Check-in</a></li>
+                <li><a href="#help">Help</a></li>
+            </ul>
+            <button class="mobile-menu" id="mobileMenu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu-content">
+            <button class="close-mobile-menu" id="closeMobileMenu">
+                <i class="fas fa-times"></i>
+            </button>
+            <ul class="mobile-nav-links">
+                <li><a href="#book"><i class="fas fa-plane-departure"></i> Book Flight</a></li>
+                <li><a href="#manage"><i class="fas fa-suitcase"></i> Manage Booking</a></li>
+                <li><a href="#checkin"><i class="fas fa-mobile-alt"></i> Check-in</a></li>
+                <li><a href="#help"><i class="fas fa-question-circle"></i> Help</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Kia Ora! Your Journey Starts Here</h1>
+            <p class="hero-subtitle">Discover Aotearoa New Zealand and beyond with manaakitanga (genuine care)</p>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking-section" id="book">
+        <div class="booking-card">
+            <div class="booking-tabs">
+                <button class="tab-btn active" data-tab="return">
+                    <i class="fas fa-exchange-alt"></i> Return
+                </button>
+                <button class="tab-btn" data-tab="oneway">
+                    <i class="fas fa-arrow-right"></i> One-way
+                </button>
+                <button class="tab-btn" data-tab="multi">
+                    <i class="fas fa-route"></i> Multi-city
+                </button>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label><i class="fas fa-plane-departure"></i> From</label>
+                    <input type="text" class="form-input" placeholder="Auckland (AKL)" id="fromInput">
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-plane-arrival"></i> To</label>
+                    <input type="text" class="form-input" placeholder="Singapore (SIN)" id="toInput">
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label><i class="fas fa-calendar"></i> Departure</label>
+                    <input type="date" class="form-input" id="departureDate">
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-calendar-check"></i> Return</label>
+                    <input type="date" class="form-input" id="returnDate">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label><i class="fas fa-users"></i> Passengers</label>
+                    <select class="form-input">
+                        <option>1 Adult</option>
+                        <option>2 Adults</option>
+                        <option>Family (2 Adults, 2 Children)</option>
+                        <option>3 Adults</option>
+                        <option>4+ Passengers</option>
+                    </select>
+                </div>
+                <div class="form-group form-group-button">
+                    <button class="search-btn" id="searchFlights">
+                        <i class="fas fa-search"></i> Search Flights
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Actions -->
+    <section class="quick-actions">
+        <h2>Quick Actions - Mahi Tere</h2>
+        <div class="actions-grid">
+            <div class="action-card" data-action="Check my flight status">
+                <div class="action-icon"><i class="fas fa-plane-departure"></i></div>
+                <h3>Flight Status</h3>
+                <p>Real-time updates</p>
+            </div>
+            <div class="action-card" data-action="I want to check in online">
+                <div class="action-icon"><i class="fas fa-mobile-alt"></i></div>
+                <h3>Online Check-in</h3>
+                <p>24hrs before flight</p>
+            </div>
+            <div class="action-card" data-action="Help me manage my booking">
+                <div class="action-icon"><i class="fas fa-suitcase"></i></div>
+                <h3>Manage Booking</h3>
+                <p>Change or cancel</p>
+            </div>
+            <div class="action-card" data-action="Tell me about baggage allowance">
+                <div class="action-icon"><i class="fas fa-luggage-cart"></i></div>
+                <h3>Baggage Info</h3>
+                <p>Check allowances</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations -->
+    <section class="destinations">
+        <div class="destinations-container">
+            <h2>Popular Destinations - Ngā Wāhi Rongonui</h2>
+            <div class="destinations-grid">
+                <div class="dest-card" data-dest="Singapore">
+                    <div class="dest-image" style="background-image: url('https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&q=80')"></div>
+                    <div class="dest-content">
+                        <h3>Singapore</h3>
+                        <div class="dest-price">From NZ$899</div>
+                        <div class="dest-features">
+                            <span><i class="fas fa-clock"></i> 10h 30m</span>
+                            <span><i class="fas fa-plane"></i> Direct</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dest-card" data-dest="Delhi">
+                    <div class="dest-image" style="background-image: url('https://images.unsplash.com/photo-1587474260584-136574528ed5?w=800&q=80')"></div>
+                    <div class="dest-content">
+                        <h3>Delhi, India</h3>
+                        <div class="dest-price">From NZ$1,299</div>
+                        <div class="dest-features">
+                            <span><i class="fas fa-clock"></i> 15h 45m</span>
+                            <span><i class="fas fa-plane"></i> Direct</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dest-card" data-dest="Sydney">
+                    <div class="dest-image" style="background-image: url('https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=800&q=80')"></div>
+                    <div class="dest-content">
+                        <h3>Sydney</h3>
+                        <div class="dest-price">From NZ$299</div>
+                        <div class="dest-features">
+                            <span><i class="fas fa-clock"></i> 3h 30m</span>
+                            <span><i class="fas fa-users"></i> 15+ daily</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Book & Manage</h4>
+                <a href="#">Flights</a>
+                <a href="#">Hotels</a>
+                <a href="#">Car Rental</a>
+                <a href="#">Travel Insurance</a>
+            </div>
+            <div class="footer-section">
+                <h4>Flight Info</h4>
+                <a href="#">Flight Status</a>
+                <a href="#">Timetables</a>
+                <a href="#">Airports</a>
+                <a href="#">Baggage</a>
+            </div>
+            <div class="footer-section">
+                <h4>Help & Support</h4>
+                <a href="#">Contact Us</a>
+                <a href="#">FAQs</a>
+                <a href="#">Chat with Aria</a>
+                <a href="#">Feedback</a>
+            </div>
+            <div class="footer-section">
+                <h4>About Air NZ</h4>
+                <a href="#">About Us</a>
+                <a href="#">Careers</a>
+                <a href="#">Sustainability</a>
+                <a href="#">Airpoints™</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Air New Zealand Limited. All rights reserved.</p>
+            <p class="maori-greeting">Kia kaha, kia māia, kia manawanui - Be strong, be brave, be steadfast</p>
+        </div>
+    </footer>
+
+    <!-- Enhanced Chat Bot with Customer Support Icon -->
+    <div class="chat-container">
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <div class="chat-header-content">
+                    <div class="agent-avatar">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <div class="agent-info">
+                        <h3>Aria - Your Travel Assistant</h3>
+                        <span class="agent-status">
+                            <span class="status-dot"></span> Online now
+                        </span>
+                    </div>
+                </div>
+                <button class="close-chat" id="closeChat">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot">
+                    <div class="message-avatar">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <div class="message-content">
+                        <strong>Aria</strong>
+                        <p>Kia ora! 👋 I'm Aria, your Air New Zealand travel assistant. Ask me about flights, bookings, or travel info - I'm here to help!</p>
+                        <div class="message-time" id="welcomeTime"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="quick-replies" id="quickReplies">
+                <button class="quick-reply-btn" data-message="Show me flights to Delhi">
+                    ✈️ Flights to Delhi
+                </button>
+                <button class="quick-reply-btn" data-message="What's the baggage allowance?">
+                    🧳 Baggage info
+                </button>
+                <button class="quick-reply-btn" data-message="Tell me about Airpoints">
+                    ⭐ Airpoints
+                </button>
+            </div>
+            
+            <div class="chat-input-container">
+                <div class="chat-input">
+                    <input type="text" id="userInput" placeholder="Type your message..." autocomplete="off">
+                    <button class="send-btn" id="sendBtn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+                <div class="chat-footer-text">
+                    Powered by AI · Conversations are saved
+                </div>
+            </div>
+        </div>
+        
+        <button class="chat-button" id="chatButton">
+            <span class="chat-badge">1</span>
+            <div class="chat-icon">
+                <i class="fas fa-headset"></i>
+            </div>
+            <div class="chat-button-text">Need Help?</div>
+        </button>
+    </div>
+
+    <!-- User Info Modal (shown on first visit) -->
+    <div class="user-modal" id="userModal">
+        <div class="user-modal-content">
+            <h2>Kia ora! Welcome to Air New Zealand</h2>
+            <p>To provide you with personalized assistance, please share your details:</p>
+            <form id="userInfoForm">
+                <div class="modal-form-group">
+                    <label><i class="fas fa-user"></i> Your Name</label>
+                    <input type="text" id="userName" placeholder="Enter your name" required>
+                </div>
+                <div class="modal-form-group">
+                    <label><i class="fas fa-envelope"></i> Email (Optional)</label>
+                    <input type="email" id="userEmail" placeholder="your@email.com">
+                </div>
+                <button type="submit" class="modal-submit-btn">
+                    <i class="fas fa-check"></i> Start Chatting
+                </button>
+                <p class="modal-note">Your conversation will be saved for quality and training purposes.</p>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

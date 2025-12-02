@@ -1,0 +1,28 @@
+ {
+  "name": "airnz-ai-assistant",
+  "type": "module",
+  "version": "2.0.0",
+  "description": "Air New Zealand AI Chat Assistant with conversation recording",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "axios": "^1.7.0",
+    "dotenv": "^16.0.0",
+    "body-parser": "^1.20.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "air-new-zealand",
+    "chatbot",
+    "ai-assistant",
+    "travel"
+  ],
+  "author": "Your Name",
+  "license": "ISC"
+}
