@@ -15,7 +15,7 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(express.static('public'));
+app.use(express.static('Public'));
 app.use(bodyParser.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
 
@@ -465,7 +465,7 @@ app.get('/health', (req, res) => {
 
 // Home page
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, 'Public', 'index.html'));
 });
 
 // ============================================================================
@@ -509,4 +509,5 @@ app.listen(PORT, () => {
   console.log('   GET  /health');
   console.log('='.repeat(60) + '\n');
   console.log('🚀 Ready! Open http://localhost:3000\n');
+
 });
